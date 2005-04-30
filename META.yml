@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-Browser
-version: 0.01
+version: 0.02
 author:
   - |-
     Christian Hansen, C<ch@ngmedia.com>
@@ -10,10 +10,10 @@ license: perl
 requires:
   HTTP::BrowserDetect: 0
 provides:
-  Catalyst::Plugin::BrowserDetect:
+  Catalyst::Plugin::Browser:
     file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.01
+    version: 0.02
   Catalyst::Request:
     file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.26

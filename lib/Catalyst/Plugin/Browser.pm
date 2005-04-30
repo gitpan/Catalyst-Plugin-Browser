@@ -1,10 +1,10 @@
-package Catalyst::Plugin::BrowserDetect;
+package Catalyst::Plugin::Browser;
 
 use strict;
 use Catalyst::Request;
 use HTTP::BrowserDetect;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 {
     package Catalyst::Request;
