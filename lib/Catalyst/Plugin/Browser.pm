@@ -4,19 +4,20 @@ use strict;
 use Catalyst::Request;
 use HTTP::BrowserDetect;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 {
     package Catalyst::Request;
-    __PACKAGE__->mk_accessors('browser');
-}
 
-sub prepare_headers {
-    my $c = shift;
+    sub browser {
+        my $self = shift;
 
-    $c->NEXT::prepare_headers(@_);
+        unless ( $self->{browser} ) {
+            $self->{browser} = HTTP::BrowserDetect->new( $self->user_agent );
+        }
 
-    $c->req->browser( HTTP::BrowserDetect->new( $c->req->user_agent ) );
+        return $self->{browser};
+    }
 }
 
 1;

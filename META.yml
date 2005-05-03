@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-Browser
-version: 0.02
+version: 0.03
 author:
   - |-
     Christian Hansen, C<ch@ngmedia.com>
@@ -12,8 +12,8 @@ requires:
 provides:
   Catalyst::Plugin::Browser:
     file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.02
+    version: 0.03
   Catalyst::Request:
     file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.02
-generated_by: Module::Build version 0.26
+    version: 0.03
+generated_by: Module::Build version 0.261
