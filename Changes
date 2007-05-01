@@ -1,6 +1,9 @@
 Revision history for Perl extension Catalyst::Plugin::Browser
 
-0.03  Xxx Xxx 00 00:00:00 2005
+0.04  2007-04-29 01:52:00
+		- Switch to Module::Install
+
+0.03  2005-05-03 13:43:00
         - HTTP::BrowserDetect object is now deferred until first method call.
 
 0.02  Sat Apr 30 23:07:00 2005

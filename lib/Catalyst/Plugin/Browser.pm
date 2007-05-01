@@ -4,7 +4,7 @@ use strict;
 use Catalyst::Request;
 use HTTP::BrowserDetect;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 {
     package Catalyst::Request;

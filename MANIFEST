@@ -1,4 +1,3 @@
-Build.PL
 Changes
 lib/Catalyst/Plugin/Browser.pm
 Makefile.PL
