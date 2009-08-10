@@ -1,19 +1,29 @@
 ---
-name: Catalyst-Plugin-Browser
-version: 0.02
+abstract: 'Browser Detection'
 author:
-  - |-
-    Christian Hansen, C<ch@ngmedia.com>
-    Marcus Ramberg, C<mramberg@cpan.org>
-abstract: Browser Detection
+  - 'Christian Hansen, C<ch@ngmedia.com>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.91'
 license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Catalyst-Plugin-Browser
+no_index:
+  directory:
+    - inc
+    - t
 requires:
-  HTTP::BrowserDetect: 0
-provides:
-  Catalyst::Plugin::Browser:
-    file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.02
-  Catalyst::Request:
-    file: lib/Catalyst/Plugin/Browser.pm
-    version: 0.02
-generated_by: Module::Build version 0.26
+  Catalyst::Runtime: 5.80004
+  Catalyst::TraitFor::Request::BrowserDetect: 0
+  CatalystX::RoleApplicator: 0
+  Moose: 0
+  namespace::autoclean: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: http://dev.catalyst.perl.org/repos/Catalyst/Catalyst-Plugin-Browser/
+version: 0.06

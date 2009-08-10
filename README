@@ -9,7 +9,7 @@ SYNOPSIS
         }
 
 DESCRIPTION
-    Extends "Catalyst::Request" with browser detection.
+    Extends your applications request class with browser detection.
 
 METHODS
     browser
@@ -17,10 +17,12 @@ METHODS
         information of the client's user agent.
 
 SEE ALSO
-    HTTP::BrowserDetect, Catalyst::Request.
+    HTTP::BrowserDetect, Catalyst::TraitFor::Request::BrowserDetect,
+    Catalyst::Request.
 
 AUTHOR
-    Christian Hansen, "ch@ngmedia.com"
+    Christian Hansen, "ch@ngmedia.com" Marcus Ramberg, "mramberg@cpan.org"
+    Florian Ragwitz, "rafl@debian.org"
 
 LICENSE
     This library is free software . You can redistribute it and/or modify it

@@ -1,24 +1,21 @@
 package Catalyst::Plugin::Browser;
 
-use strict;
-use Catalyst::Request;
-use HTTP::BrowserDetect;
+use Moose::Role;
+use CatalystX::RoleApplicator ();
+use namespace::autoclean;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
-{
-    package Catalyst::Request;
+after setup_finalize => sub {
+    my ($app) = @_;
 
-    sub browser {
-        my $self = shift;
+    # yeah, i know. sue me.
+    CatalystX::RoleApplicator->init_meta(for_class => $app);
 
-        unless ( $self->{browser} ) {
-            $self->{browser} = HTTP::BrowserDetect->new( $self->user_agent );
-        }
-
-        return $self->{browser};
-    }
-}
+    $app->apply_request_class_roles(qw/
+        Catalyst::TraitFor::Request::BrowserDetect
+    /);
+};
 
 1;
 
@@ -39,7 +36,7 @@ Catalyst::Plugin::Browser - Browser Detection
 
 =head1 DESCRIPTION
 
-Extends C<Catalyst::Request> with browser detection.
+Extends your applications request class with browser detection.
 
 =head1 METHODS
 
@@ -54,12 +51,13 @@ information of the client's user agent.
 
 =head1 SEE ALSO
 
-L<HTTP::BrowserDetect>, L<Catalyst::Request>.
+L<HTTP::BrowserDetect>, L<Catalyst::TraitFor::Request::BrowserDetect>, L<Catalyst::Request>.
 
 =head1 AUTHOR
 
 Christian Hansen, C<ch@ngmedia.com>
 Marcus Ramberg, C<mramberg@cpan.org>
+Florian Ragwitz, C<rafl@debian.org>
 
 =head1 LICENSE
 
