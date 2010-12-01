@@ -1,30 +1,13 @@
-NAME
-    Catalyst::Plugin::Browser - Browser Detection
 
-SYNOPSIS
-        use Catalyst qw[Browser];
 
-        if ( $c->request->browser->windows && $c->request->browser->ie ) {
-            # do something
-        }
+This archive contains the distribution Catalyst-Plugin-Browser,
+version 0.07:
 
-DESCRIPTION
-    Extends your applications request class with browser detection.
+  DEPRECATED: Browser Detection
 
-METHODS
-    browser
-        Returns an instance of HTTP::BrowserDetect, which lets you get
-        information of the client's user agent.
+This software is copyright (c) 2010 by Christian Hansen.
 
-SEE ALSO
-    HTTP::BrowserDetect, Catalyst::TraitFor::Request::BrowserDetect,
-    Catalyst::Request.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-AUTHOR
-    Christian Hansen, "ch@ngmedia.com" Marcus Ramberg, "mramberg@cpan.org"
-    Florian Ragwitz, "rafl@debian.org"
-
-LICENSE
-    This library is free software . You can redistribute it and/or modify it
-    under the same terms as perl itself.
 

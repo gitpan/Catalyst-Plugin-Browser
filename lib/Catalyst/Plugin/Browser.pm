@@ -1,10 +1,15 @@
 package Catalyst::Plugin::Browser;
+BEGIN {
+  $Catalyst::Plugin::Browser::AUTHORITY = 'cpan:FLORA';
+}
+BEGIN {
+  $Catalyst::Plugin::Browser::VERSION = '0.07';
+}
+# ABSTRACT: DEPRECATED: Browser Detection
 
 use Moose::Role;
 use CatalystX::RoleApplicator ();
 use namespace::autoclean;
-
-our $VERSION = '0.06';
 
 after setup_finalize => sub {
     my ($app) = @_;
@@ -19,11 +24,15 @@ after setup_finalize => sub {
 
 1;
 
+
 __END__
+=pod
+
+=encoding utf-8
 
 =head1 NAME
 
-Catalyst::Plugin::Browser - Browser Detection
+Catalyst::Plugin::Browser - DEPRECATED: Browser Detection
 
 =head1 SYNOPSIS
 
@@ -33,10 +42,14 @@ Catalyst::Plugin::Browser - Browser Detection
         # do something
     }
 
-
 =head1 DESCRIPTION
 
 Extends your applications request class with browser detection.
+
+=head1 DEPRECATED
+
+This module should no longer be used in new applications.
+L<Catalyst::TraitFor::Request::BrowserDetect> is the replacement.
 
 =head1 METHODS
 
@@ -53,15 +66,30 @@ information of the client's user agent.
 
 L<HTTP::BrowserDetect>, L<Catalyst::TraitFor::Request::BrowserDetect>, L<Catalyst::Request>.
 
-=head1 AUTHOR
+=head1 AUTHORS
 
-Christian Hansen, C<ch@ngmedia.com>
-Marcus Ramberg, C<mramberg@cpan.org>
-Florian Ragwitz, C<rafl@debian.org>
+=over 4
 
-=head1 LICENSE
+=item *
 
-This library is free software . You can redistribute it and/or modify it under
-the same terms as perl itself.
+Christian Hansen <ch@ngmedia.com>
+
+=item *
+
+Marcus Ramberg <mramberg@cpan.org>
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Christian Hansen.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
