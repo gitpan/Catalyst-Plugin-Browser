@@ -3,7 +3,7 @@ BEGIN {
   $Catalyst::Plugin::Browser::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $Catalyst::Plugin::Browser::VERSION = '0.07';
+  $Catalyst::Plugin::Browser::VERSION = '0.08';
 }
 # ABSTRACT: DEPRECATED: Browser Detection
 

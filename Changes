@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::Plugin::Browser
 
+0.08  Thu, 02 Dec 2010 09:10:51 +0100
+       - Fix missing dependency on Catalyst::TraitFor::Request::BrowserDetect.
+
 0.07  2010-12-01 11:18:32
        - Deprecate in favour of Catalyst::TraitFor::Request::BrowserDetect.
 

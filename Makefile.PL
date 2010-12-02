@@ -28,11 +28,12 @@ my %WriteMakefileArgs = (
   'NAME' => 'Catalyst::Plugin::Browser',
   'PREREQ_PM' => {
     'Catalyst::Runtime' => '5.80004',
+    'Catalyst::TraitFor::Request::BrowserDetect' => '0',
     'CatalystX::RoleApplicator' => '0',
     'Moose::Role' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.07',
+  'VERSION' => '0.08',
   'test' => {
     'TESTS' => 't/*.t'
   }
